@@ -207,7 +207,8 @@ PRODUCT_PACKAGES += \
     camera.msm8916 \
     libboringssl-compat \
     libstlport \
-    libmm-qcamera
+    libmm-qcamera \
+    Snap
 
 # Sensor & activity_recognition HAL
 PRODUCT_PACKAGES += \
