@@ -535,8 +535,8 @@ vendor/lib64/libxml.so
 
 # Sensors
 #bin/sensor_select.sh
-lib/hw/sensors.lsm6db0.so
-lib64/hw/sensors.lsm6db0.so
+vendor/lib/libsensors.lsm6db0.so
+vendor/lib64/libsensors.lsm6db0.so
 
 # Time services
 -app/TimeService/TimeService.apk
