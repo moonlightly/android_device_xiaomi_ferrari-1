@@ -210,6 +210,10 @@ PRODUCT_PACKAGES += \
     libmm-qcamera \
     Snap
 
+# Gello
+PRODUCT_PACKAGES += \
+    Gello
+
 # Sensor & activity_recognition HAL
 PRODUCT_PACKAGES += \
     sensors.msm8916 \
