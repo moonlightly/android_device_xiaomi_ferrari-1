@@ -40,8 +40,7 @@ LOCAL_CFLAGS += \
 
 LOCAL_C_INCLUDES:= \
     $(TARGET_OUT_HEADERS)/gps.utils \
-    $(TARGET_OUT_HEADERS)/libloc_core \
-    $(LOCAL_PATH)
+    $(TARGET_OUT_HEADERS)/libloc_core
 
 LOCAL_COPY_HEADERS_TO:= libloc_eng/
 LOCAL_COPY_HEADERS:= \
@@ -60,7 +59,7 @@ include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
 
-LOCAL_MODULE := gps.$(TARGET_BOARD_PLATFORM)
+LOCAL_MODULE := gps.$(BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE)
 LOCAL_MODULE_OWNER := qcom
 
 LOCAL_MODULE_TAGS := optional
@@ -76,7 +75,7 @@ LOCAL_SHARED_LIBRARIES := \
     libgps.utils \
     libdl
 
-ifneq ($(filter $(TARGET_DEVICE), apq8084 msm8960), false)
+ifneq ($(filter $(TARGET_BOARD_PLATFORM), apq8084 msm8960), false)
 endif
 
 LOCAL_SRC_FILES += \
@@ -95,19 +94,6 @@ endif
 LOCAL_C_INCLUDES:= \
     $(TARGET_OUT_HEADERS)/gps.utils \
     $(TARGET_OUT_HEADERS)/libloc_core
-
-#ifeq ($(filter $(TARGET_DEVICE), apq8064 msm8960),)
-#$(call print-vars, $(TARGET_DEVICE))
-#LOCAL_SHARED_LIBRARIES += \
-#    libmdmdetect \
-#    libperipheral_client
-#
-#LOCAL_C_INCLUDES += \
-#    $(TARGET_OUT_HEADERS)/libmdmdetect/inc \
-#    $(TARGET_OUT_HEADERS)/libperipheralclient/inc
-#LOCAL_CFLAGS += \
-#    -DMODEM_POWER_VOTE
-#endif
 
 LOCAL_PRELINK_MODULE := false
 LOCAL_MODULE_RELATIVE_PATH := hw
