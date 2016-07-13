@@ -214,10 +214,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Gello
 
-# Sensor & activity_recognition HAL
+# Sensor HAL
 PRODUCT_PACKAGES += \
-    sensors.msm8916 \
-    activity_recognition.ferrari
+    sensors.msm8916
  
 # Multi HAL configuration file
 PRODUCT_COPY_FILES += \
